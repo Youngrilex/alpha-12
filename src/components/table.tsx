@@ -41,22 +41,16 @@ const statusStyles = {
 };
 
 const darkModeStatusStyles = {
-    Completed: "border border-[1px] border-[#65DDB5] text-[#65DDB5]",
-    "In Progress": "border border-[1px] border-[#77B1FF] text-[#77B1FF]",
-  };
+  Completed: "border border-[1px] border-[#65DDB5] text-[#65DDB5]",
+  "In Progress": "border border-[1px] border-[#77B1FF] text-[#77B1FF]",
+};
 
 const EventTable = ({ darkMode }: { darkMode: boolean }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  // Open modal
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
-
-  // Close modal
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+  // Modal control functions
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
 
   return (
     <div className="py-3">
@@ -72,7 +66,7 @@ const EventTable = ({ darkMode }: { darkMode: boolean }) => {
         <tbody>
           {events.map((event, index) => (
             <tr key={index} className={`text-[14px] h-[48px] ${darkMode ? "bg-[#484554] text-white" : ""}`}>
-              <td className="px-4 py-2 w-1/4 truncate" onClick={handleOpenModal}>
+              <td className="px-4 py-2 w-1/4 truncate cursor-pointer" onClick={handleOpenModal}>
                 {event.name}
               </td>
               <td className="px-4 py-2 w-[28%] truncate">{event.date}</td>
@@ -83,7 +77,11 @@ const EventTable = ({ darkMode }: { darkMode: boolean }) => {
                     darkMode ? darkModeStatusStyles[event.status] : statusStyles[event.status]
                   }`}
                 >
-                  <div className={`h-[6px] w-[6px] rounded-full ${event.status === "Completed" ? "bg-[#10B981]" : "bg-[#3B82F6]"}`}></div>
+                  <div
+                    className={`h-[6px] w-[6px] rounded-full ${
+                      event.status === "Completed" ? "bg-[#10B981]" : "bg-[#3B82F6]"
+                    }`}
+                  ></div>
                   {event.status}
                 </span>
               </td>
@@ -92,13 +90,10 @@ const EventTable = ({ darkMode }: { darkMode: boolean }) => {
         </tbody>
       </table>
 
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} event={event}  darkMode={darkMode}/>
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} event={event} darkMode={darkMode} />
     </div>
   );
 };
 
 export default EventTable;
-
-
-
-

@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -47,12 +47,13 @@ const SlideItem: React.FC<Slide> = ({ image, title, description }) => (
 export function CustomCarousel() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, EffectFade]}
+      modules={[Navigation, Pagination, EffectFade, Autoplay]}
       navigation
       pagination={{ clickable: true }}
       loop={true} 
       effect="fade"
       fadeEffect={{ crossFade: true }} 
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="w-full rounded-[5px]"
     >
       {slides.map((slide, index) => (

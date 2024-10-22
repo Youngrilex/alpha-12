@@ -134,7 +134,7 @@ export function MobileSidebar({ darkMode, toggleDarkMode }: { darkMode: boolean;
           <IoIosClose onClick={toggleSidebar} className={`absolute top-4 right-4 ${darkMode ? 'bg-[#ADA9BB]' : 'bg-white'} rounded-full border h-[24px] w-[24px]`} />
         ) : (
           <div onClick={toggleSidebar}>
-            <MobileMenuIcon />
+            <MobileMenuIcon color={darkMode ? "#FFFF" : "#64748B"} />
           </div>
         )}
       </aside>
