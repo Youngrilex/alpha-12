@@ -27,8 +27,8 @@ export function TopNav({ darkMode }: { darkMode: boolean }) {
             </div>
             <History darkMode={darkMode}/>
             <div className="hidden sm:block"> <EventTable darkMode={darkMode} /></div>           
-            <div className="block sm:hidden"><TableComponent darkMode={darkMode} /></div>
-            <Pagination darkMode={darkMode}/>e
+            <div className="block sm:hidden -mx-6"><TableComponent darkMode={darkMode} /></div>
+            <Pagination darkMode={darkMode}/>
           </div>       
       </header>
     );

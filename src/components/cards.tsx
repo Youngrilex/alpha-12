@@ -37,7 +37,7 @@ import {
     return (
       <>
         <h1 className={`text-[22px] ${darkMode ? "text-white" : "text-black"}`}>
-          Welcome! Here's your summary
+          Welcome! here's your summary
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mt-4">
           {cards.map(({ title, value, icon1: Icon1, icon2: Icon2 }) => (

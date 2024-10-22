@@ -140,7 +140,7 @@ export function MobileSidebar({ darkMode, toggleDarkMode }: { darkMode: boolean;
       </aside>
 
       {isSidebarOpen && (
-        <div ref={sidebarRef} className="flex flex-col space-y-2 mt-2 px-4">
+        <div ref={sidebarRef} className="flex flex-col space-y-2 mt-2 px-4 h-[calc(100vh-64px)]">
           {sidebarLinks.map((link) => (
             <SidebarItem key={link.url} link={link} isCollapsed={IsCollapse} />
           ))}

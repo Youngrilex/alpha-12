@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, event, darkMode }) => {
       <div
         className={`${
           darkMode ? "bg-[#484554] text-white" : "bg-white"
-        } rounded-[5px] max-w-md shadow-lg relative w-[440px] sm:h-[380px] md:h-[380px] lg:h-[380px]`}
+        } rounded-[5px] max-w-md shadow-lg relative w-[90vw] sm:w-[440px] h-[470px] sm:h-[380px] md:h-[380px] lg:h-[380px]`}
       >
         <IoIosClose
           onClick={onClose}
@@ -84,17 +84,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, event, darkMode }) => {
         <p className="px-6">{event.attendees} Attendees</p>
 
         {/* Action Buttons */}
-        <div className={`absolute w-full px-6 bottom-0 h-[84px] flex flex-col items-center sm:flex-row md:flex-row lg:flex-row justify-between ${darkMode? 'bg-[#ADA9BB]':'bg-[#F8FAFC]'}`}>
+        <div className={`absolute w-full px-6 bottom-0 gap-2 h-[174px] sm:h-[84px] flex flex-col items-center justify-center sm:flex-row md:flex-row lg:flex-row sm:justify-between ${darkMode? 'bg-[#ADA9BB]':'bg-[#F8FAFC]'}`}>
           <button
-            className='px-4 bg-white text-[#334155] border-[1px] rounded-[5px] h-[36px] border-[#E2E8F0]'
+            className='px-4 bg-white w-full text-[#334155] border-[1px] rounded-[5px] h-[36px] border-[#E2E8F0]'
           >
             Edit
           </button>
-          <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row gap-2">
-            <button className="bg-[#F43F5E] px-4 rounded-[5px] h-[36px] hover:bg-red-600">
+          <div className="flex w-full flex-col sm:flex-row md:flex-row lg:flex-row gap-2">
+            <button className="bg-[#F43F5E] px-4 rounded-[5px] h-[36px] text-white hover:bg-red-600">
               Delete
             </button>
-            <button className="bg-[#8576FF] px-4 rounded-[5px] h-[36px] hover:bg-blue-600">
+            <button className="bg-[#8576FF] w-full px-4 text-white rounded-[5px] h-[36px] hover:bg-blue-600">
               Mark as completed
             </button>
           </div>
