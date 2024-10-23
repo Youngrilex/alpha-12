@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 // Define the full data with three-letter month names
 const data = [
   { name: "Jan", registrations: 700 },
-  { name: "Feb", registrations: 900 },
+  { name: "Feb", registrations: 925 },
   { name: "Mar", registrations: 800 },
-  { name: "Apr", registrations: 400 },
+  { name: "Apr", registrations: 425 },
   { name: "May", registrations: 1000 },
   { name: "Jun", registrations: 550 },
-  { name: "Jul", registrations: 825 },
+  { name: "Jul", registrations: 850 },
   { name: "Aug", registrations: 375 },
   { name: "Sep", registrations: 825 },
-  { name: "Oct", registrations: 625 },
+  { name: "Oct", registrations: 725 },
   { name: "Nov", registrations: 975 },
   { name: "Dec", registrations: 625 },
 ];
