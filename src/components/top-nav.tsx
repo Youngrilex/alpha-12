@@ -21,7 +21,7 @@ export function TopNav({ darkMode }: { darkMode: boolean }) {
         {/* Event Chart and Carousel Section */}
         <div className="sm:h-[320px] md:h-[320px] lg:h-[320px] w-full flex flex-col sm:flex-row md:flex-row lg:flex-row items-center justify-center gap-4">
           <div
-            className={`w-full sm:w-1/2 md:w-1/2 lg:w-1/2 h-full pt-12 rounded-[5px] ${
+            className={`w-full sm:w-1/2 md:w-1/2 lg:w-1/2 h-full pt-12 pr-6 rounded-[5px] ${
               darkMode ? "bg-[#484554]" : "border-[1px] border-[#F2F2F7] bg-white"
             }`}
           >
